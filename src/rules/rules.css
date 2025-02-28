@@ -1,0 +1,28 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* cross axis is horizontal, and start of the horizontal axis is left */
+    align-items: flex-start; /* cross axis is horizontal, and start of the horizontal axis is left */
+}
+
+.content {
+    padding-left: 80px;
+    margin-left: 170px; 
+    flex-grow: 1;
+    background-color: #DAA520; 
+}
+.container {
+    display: flex;
+    flex-direction: row ;
+    align-items: center;
+    overflow-x: hidden;
+    background-color: #DAA520;
+    flex-grow: 1; 
+
+}
+
+.icon-image {
+    width: 50px; 
+    vertical-align: middle; 
+    margin-bottom: 10px;
+}
