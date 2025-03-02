@@ -8,7 +8,7 @@
     background-color: #DAA520;
 }
 
-h1 {
+.score-page h1 {
     font-size: 50px;
     font-family: "Comic Sans MS", cursive;
     background: linear-gradient(45deg, #FFD600, #FFB800, #FFD600);

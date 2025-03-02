@@ -5,6 +5,7 @@ body {
     flex-direction: row;
     height: 100vh;
     margin: 0; 
+    background-color: #DAA520;
 }
 
 /* Sticky Navbar Styling */
@@ -110,22 +111,23 @@ body {
 
 /* Content Area */
 .content {
-    margin-left: 170px; 
+    margin-left: 160px; 
     flex-grow: 1;
     background-color: #DAA520;
-    height: 100vh;
+    min-height: 100vh;
     padding-top: 20px;
     box-sizing: border-box; 
 }
 
-.home-page-container {
+/* .home-page-container {
     display: flex;
     flex-direction: column;  
     align-items: center; 
     justify-content: center; 
     text-align: center; 
     gap: 20px;
-}
+    width: 100%
+} */
 
 @keyframes shimmer {
     0% { background-position: -200% 0; }
@@ -151,5 +153,6 @@ body {
 }
 
 h1 {
-    color: #4e739a;
+    color: white;
+    background-color: #DAA520;
 }
