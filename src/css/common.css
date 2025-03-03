@@ -148,11 +148,36 @@ body {
 
 .image {
     width: 100%;
-    max-width: 800px;
+    max-width: 400px;
     height: auto;
 }
 
 h1 {
     color: white;
-    background-color: #DAA520;
+    /* background-color: #DAA520; */
+}
+
+.home-button-container {
+    display: flex;
+    flex-direction: row;  
+    align-items: center; 
+    justify-content: center; 
+    text-align: center; 
+    gap: 20px;
+    width: 100%
+}
+
+.home-game-button {
+    font-size: 20px;
+    padding: 10px 15px;
+    background-color: #5694d6;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+.home-game-button:hover {
+    background-color: darkred;
 }

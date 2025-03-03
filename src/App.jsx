@@ -1,7 +1,8 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import {Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';   // Home Page
 import Rules from './pages/Rules';
+import Game from './pages/Game';
 import HighScores from './pages/HighScores';
 
 import { useState } from 'react'
@@ -12,13 +13,12 @@ import './App.css'
 
 function App() {
   return (
-    <Router>
-      <Routes>
-        <Route path="/" element={<Home />} />  
-        <Route path="/rules" element={<Rules />} />
-        <Route path="/highscores" element={<HighScores />} />
-      </Routes>
-    </Router>
+    <Routes>
+      <Route path="/" element={<Home />} />  
+      <Route path="/rules" element={<Rules />} />
+      <Route path="/game/:difficulty" element={<Game />} />
+      <Route path="/highscores" element={<HighScores />} />
+    </Routes>
   );
 }
 

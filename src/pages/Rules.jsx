@@ -20,7 +20,7 @@ function Rules() {
             </ul>
           </nav> 
     
-          <div className="content">
+          <div className="rules-content">
             <h1>Battleship Game Rules</h1>
             
             <h2>Preparation</h2>

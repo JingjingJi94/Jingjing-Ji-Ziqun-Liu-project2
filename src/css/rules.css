@@ -1,24 +1,26 @@
 body {
-    display: flex;
-    flex-direction: column;
     justify-content: flex-start; /* cross axis is horizontal, and start of the horizontal axis is left */
     align-items: flex-start; /* cross axis is horizontal, and start of the horizontal axis is left */
+    background-color: #DAA520; 
+    height: 100%; 
 }
 
-.content {
+.rules-content {
     padding-left: 80px;
     margin-left: 170px; 
     flex-grow: 1;
-    background-color: #DAA520; 
+    color: black;
+    text-align: left;
+    font-size: 18px;
+    display: flex; 
+    flex-direction: column; 
+    padding-top: 20px;
 }
 .container {
     display: flex;
     flex-direction: row ;
     align-items: center;
     overflow-x: hidden;
-    background-color: #DAA520;
-    flex-grow: 1; 
-
 }
 
 .icon-image {
