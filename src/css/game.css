@@ -50,13 +50,13 @@
 }
 
 /* Hit and Miss styles */
-.hit {
+.miss {
     font-size: 28px;
     background: #25cf37;
     color: white;
 }
 
-.miss {
+.hit {
     color: red;
     font-size: 28px;
     background: lightgray;
