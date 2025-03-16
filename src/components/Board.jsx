@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "../../css/game.css";
+import "../css/game.css";
 
 const Board = (props) => {
   return (

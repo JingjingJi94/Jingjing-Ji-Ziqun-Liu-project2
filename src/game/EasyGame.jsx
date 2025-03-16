@@ -1,8 +1,8 @@
 import { useState } from "react";
-import Board from "./Board";
-import Timer from "./Timer";
+import Board from "../components/Board";
+import Timer from "../components/Timer.jsx";
 import placeShipsRandomly from "./ShipPlacement.js";
-import "../../css/game.css";
+import "../css/game.css";
 
 export default function EasyGame() {
   const [aiBoard, setAiBoard] = useState(placeShipsRandomly()); // Only enemy board

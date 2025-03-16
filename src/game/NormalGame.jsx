@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import Board from "./Board";
+import Board from "../components/Board";
 import placeShipsRandomly from "./ShipPlacement.js";
-import "../../css/game.css";
-import Timer from "./Timer";
+import "../css/game.css";
+import Timer from "../components/Timer.jsx";
 
 export default function NormalGame() {
   const [playerBoard, setPlayerBoard] = useState(placeShipsRandomly());

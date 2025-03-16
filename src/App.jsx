@@ -1,9 +1,9 @@
 import { Routes, Route } from "react-router-dom";
 import Home from "./pages/Home"; // Home Page
 import Rules from "./pages/Rules";
-import Game from "./pages/game/Game";
+import Game from "./pages/Game";
 import HighScores from "./pages/HighScores";
-import Nav from "./pages/Nav";
+import Nav from "./components/Nav";
 import "./css/game.css";
 import "./css/App.css";
 
