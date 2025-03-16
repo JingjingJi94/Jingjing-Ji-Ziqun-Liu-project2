@@ -1,0 +1,169 @@
+/* Game Container */
+.game-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    text-align: center;
+    min-height: 100vh; /* Ensures content can expand beyond viewport */
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Boards Layout */
+.boards {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    margin-left: 180px;
+    max-width: calc(100vw - 200px);
+    max-height: 90vh; /* Prevents boards from extending beyond screen */
+}
+
+/* Grid settings */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: repeat(10, 1fr);
+    gap: 3px;
+    width: 450px;
+    height: 450px;
+    background-color: white;
+    border-radius: 5px;
+    padding: 5px;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+/* Individual grid cells */
+.box {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    transition: transform 0.4s, width 0.4s, height 0.4s;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background: linear-gradient(to bottom right, lightblue, grey);
+}
+
+/* Hit and Miss styles */
+.hit {
+    font-size: 28px;
+    background: #25cf37;
+    color: white;
+}
+
+.miss {
+    color: red;
+    font-size: 28px;
+    background: lightgray;
+}
+
+.ship-dot {
+    color: black;
+    font-size: 25px;
+}
+
+/* Timer styling */
+.timer {
+    font-size: 20px;
+    margin-bottom: 15px;
+    color: red;
+}
+
+/* Hover effect */
+.box:hover {
+    cursor: pointer;
+    transform: rotate(10deg) scale(1.1);
+}
+
+/* Restart button */
+.restart-button {
+    font-size: 18px;
+    /* padding: 10px 15px; */
+    background-color: grey;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+.restart-button:hover {
+    background-color: darkred;
+}
+
+/* Ensure scrolling works */
+html, body {
+    min-height: 100vh;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+/* Disable clicks after game over */
+.disabled-board {
+    pointer-events: none;
+    opacity: 0.5;
+}
+
+/* Responsive adjustments for medium screens */
+@media (max-width: 1265px) {
+    .content {
+        width: 90%;
+        max-width: 100%;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .grid-container {
+        width: 380px;
+        height: 380px;
+    }
+
+    .box {
+        font-size: 16px;
+    }
+
+    .boards {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        overflow-y: auto;
+        max-height: none; /* Removes height restriction */
+    }
+}
+
+/* Adjustments for very small screens */
+@media (max-width: 768px) {
+    .content {
+        width: 90%;
+        max-width: 100%;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .grid-container {
+        width: 320px;
+        height: 320px;
+    }
+
+    .box {
+        font-size: 16px;
+    }
+
+    .boards {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        overflow-y: auto;
+        max-height: none; /* Removes height restriction */
+    }
+}

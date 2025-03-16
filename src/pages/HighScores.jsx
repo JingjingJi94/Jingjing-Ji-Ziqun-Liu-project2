@@ -1,24 +1,14 @@
-import React from 'react';
-import '../css/common.css';
-import '../css/scores.css';
+import React from "react";
+import { Link } from "react-router-dom";
+import "../css/common.css";
+import "../css/scores.css";
 
 const Scores = () => {
   return (
     <div>
-      {/* Sticky Left Sidebar Navbar */}
-      <nav className="navbar">
-        <div className="navbar-title">Battleship Game</div>
-        <ul className="navbar-links">
-          <li><a href="../index.html" className="navbar-link">Home</a></li>
-          <li><a href="../game/index.html" className="navbar-link">Sample Game</a></li>
-          <li><a href="../rules/index.html" className="navbar-link">Game Rules</a></li>
-          <li><a href="../scores/index.html" className="navbar-link active">High Scores</a></li>
-        </ul>
-      </nav>
-
       <div className="content">
         <div className="score-page">
-        <h1>&gt;&gt;&gt;High Scores&lt;&lt;&lt;</h1>
+          <h1>&gt;&gt;&gt;High Scores&lt;&lt;&lt;</h1>
         </div>
 
         <table>
@@ -78,6 +68,6 @@ const Scores = () => {
       </div>
     </div>
   );
-}
+};
 
 export default Scores;
