@@ -1,31 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Open+Sans:wght@400&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css');
 
+/* Global Styling */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Open Sans', sans-serif;
     display: flex;
-    flex-direction: row;
     height: 100vh;
-    margin: 0; 
+    margin: 0;
     background-color: #DAA520;
 }
 
-/* Sticky Navbar Styling */
+AllPageContent {
+    padding-left: 100px;
+    margin-left: 180px; 
+    padding-top: 20px;
+}
+
+/* Navbar Styling */
 .navbar {
-    position: fixed; 
+    position: fixed;
     top: 0;
-    left: 0; 
-    height: 100vh; 
+    left: 0;
+    height: 100vh;
+    width: 170px;
     background-color: #5694d6;
     color: white;
-    width: 170px;
     display: flex;
-    flex-direction: column; 
+    flex-direction: column;
     justify-content: space-between;
     padding: 20px;
     z-index: 1000;
 }
 
-/* Title in Navbar */
+/* Navbar Title */
 .navbar-title {
+    font-family: 'Montserrat', sans-serif;
     font-size: 24px;
     font-weight: bold;
     margin-bottom: 20px;
@@ -36,13 +45,7 @@ body {
     list-style: none;
     padding: 0;
     font-size: 18px;
-    color: white;
     font-weight: bold;
-}
-
-.navbar-link:hover {
-    color: #ffcc00;
-    transform: scale(1.2) rotate(10deg);
 }
 
 .navbar-links li {
@@ -50,121 +53,59 @@ body {
     display: flex;
 }
 
+/* Navbar Link Styling */
 .navbar-link {
     color: white;
     text-decoration: none;
     font-weight: bold;
-    transition: color 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Space between icon and text */
+    transition: color 0.3s ease-in-out, transform 0.1s ease-in-out;
 }
 
-.navbar-link.active {
+.navbar-link:hover {
     color: #ffcc00;
+    text-decoration: underline;
+    transform: scale(1.12);
 }
 
-
-
-/* for smaller screens */
-@media (max-width: 768px) {
-    body {
-        flex-direction: column;
-        justify-content: flex-start;
-    }
-
-     .navbar {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-        align-items: center;
-        background-color: #5694d6;
-        width: 100%; 
-        height: 60px; 
-        position: fixed; 
-        bottom: 0;
-        left: 0;
-        padding: 10px;
-    }
-
-    .navbar-links {
-        display: flex;
-        padding: 0;
-        font-size: 15px;
-        color: white;
-        font-weight: bold;
-        justify-content: space-around;
-        width: 100%;
-    }
-
-    .navbar-links li {
-        margin: 0 15px; 
-    }
-
-    .content {
-        margin-left: 0;
-        padding: 10px; 
-        padding-bottom: 70px; 
-    }
-
-    h1 {
-        font-size: 30px;
-    }
+/* Selected (Active) Link */
+.navbar-link.selected {
+    color: #ffcc00;
+    text-decoration: underline;
+    font-weight: bold;
 }
 
-/* Content Area */
+/* Adjust Main Content to Prevent Overlap */
 .content {
-    margin-left: 160px; 
+    margin-left: 180px; /* Ensures it clears the navbar */
+    padding-left: 40px;
     flex-grow: 1;
     background-color: #DAA520;
     min-height: 100vh;
-    padding-top: 20px;
-    box-sizing: border-box; 
-}
-
-/* .home-page-container {
+    padding: 20px; /* Adjust padding for better spacing */
+    box-sizing: border-box;
     display: flex;
-    flex-direction: column;  
-    align-items: center; 
-    justify-content: center; 
-    text-align: center; 
-    gap: 20px;
-    width: 100%
-} */
-
-@keyframes shimmer {
-    0% { background-position: -200% 0; }
-    100% { background-position: 200% 0; }
+    flex-direction: column;
+    align-items: center; /* Centers all content */
+    justify-content: center; /* Centers content vertically */
+    text-align: center; /* Ensures text is centered */
 }
 
-.title {
-    font-size: 80px;
-    font-weight: bold;
-    text-align: center;
-    color:blue;
-    background: linear-gradient(90deg, gold, blue, white, gold);
-    background-size: 200% auto;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    animation: shimmer 2s infinite linear;
-}
-
-.image {
-    width: 100%;
-    max-width: 400px;
-    height: auto;
-}
-
+/* Headings */
 h1 {
+    font-size: 28px;
     color: white;
-    /* background-color: #DAA520; */
+    margin-top: 20px;
 }
 
+/* Home Page Buttons */
 .home-button-container {
     display: flex;
-    flex-direction: row;  
-    align-items: center; 
-    justify-content: center; 
-    text-align: center; 
+    justify-content: center;
     gap: 20px;
-    width: 100%
+    margin-top: 20px; /* Ensures proper spacing below the heading */
 }
 
 .home-game-button {
@@ -176,8 +117,80 @@ h1 {
     border-radius: 8px;
     cursor: pointer;
     margin-top: 15px;
+    transition: background-color 0.3s ease-in-out;
 }
 
 .home-game-button:hover {
     background-color: darkred;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar {
+        width: 100%;
+        height: 60px;
+        flex-direction: row;
+        justify-content: space-around;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        padding: 10px;
+    }
+
+    .navbar-title {
+        font-size: 20px;
+        margin-bottom: 0;
+    }
+
+    .navbar-links {
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+        font-size: 16px;
+    }
+
+    .navbar-links li {
+        margin: 0 10px;
+    }
+
+    .content {
+        margin-left: 0;
+        padding: 10px;
+        text-align: center;
+        padding-bottom: 70px;
+    }
+
+    h1 {
+        font-size: 24px;
+        margin-top: 15px;
+    }
+
+    .home-button-container {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .title {
+        font-size: 10vw;
+    }  
+}
+
+/* Title Animation */
+@keyframes shimmer {
+    0% { background-position: -200% 0; }
+    100% { background-position: 200% 0; }
+}
+
+.title {
+    font-size: 8vw;
+    font-weight: bold;
+    text-align: center;
+    color: white;
+}
+
+/* Image */
+.image {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
 }

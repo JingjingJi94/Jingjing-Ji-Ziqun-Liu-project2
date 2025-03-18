@@ -1,16 +1,12 @@
-import React from 'react';
-import { useParams } from 'react-router-dom';
+import React from "react";
+import { useParams, Navigate } from "react-router-dom";
+import EasyGame from "../game/EasyGame";
+import NormalGame from "../game/NormalGame";
 
-function Game() {
+export default function Game() {
   const { difficulty } = useParams();
 
-  return (
-    // <div>Hello</div>
-    <div>
-      <h1>Game Difficulty: {difficulty}</h1>
-      <p>Welcome to the {difficulty} difficulty game!</p>
-    </div>
-  );
+  if (difficulty === "normal") return <NormalGame />;
+  else if (difficulty === "easy") return <EasyGame />;
+  else return <Navigate to="/" />;
 }
-
-export default Game;

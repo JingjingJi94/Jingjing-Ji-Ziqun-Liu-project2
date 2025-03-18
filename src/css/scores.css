@@ -1,11 +1,15 @@
-.content {
+.scores-content {
     display: flex;
+    flex-grow: 1;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100vh;
     margin: 0;
-    background-color: #DAA520;
+    background-color: white;
+    padding-left: 100px;
+    margin-left: 180px; 
+    padding-top: 20px;
 }
 
 .score-page h1 {
