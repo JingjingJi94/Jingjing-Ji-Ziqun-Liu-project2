@@ -130,10 +130,10 @@ export default function NormalGame() {
             gameOver={winner !== null}
           />
         </div>
-        <button className="restart-button" onClick={resetGame}>
-          🔄 Restart Game
-        </button>
       </div>
+      <button className="restart-button" onClick={resetGame}>
+        🔄 Restart Game
+      </button>
     </div>
   );
 }

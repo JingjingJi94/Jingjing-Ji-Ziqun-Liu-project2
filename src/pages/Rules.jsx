@@ -1,5 +1,3 @@
-import React from "react";
-import { Link } from "react-router-dom";
 import "../css/common.css"; // Import common styles
 import "../css/rules.css"; // Import the rules.css file
 

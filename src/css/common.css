@@ -79,8 +79,13 @@ AllPageContent {
 
 /* Adjust Main Content to Prevent Overlap */
 .content {
-    margin-left: 180px; /* Ensures it clears the navbar */
-    padding-left: 40px;
+    /* margin-left: 180px;
+    padding-left: 40px; */
+    position: fixed;
+    top: 0;
+    left: 180px;
+    right: 0;
+    bottom: 0;
     flex-grow: 1;
     background-color: #DAA520;
     min-height: 100vh;
@@ -98,6 +103,7 @@ h1 {
     font-size: 28px;
     color: white;
     margin-top: 20px;
+    margin-bottom: 0;
 }
 
 /* Home Page Buttons */
@@ -154,7 +160,7 @@ h1 {
     }
 
     .content {
-        margin-left: 0;
+        left: 0;
         padding: 10px;
         text-align: center;
         padding-bottom: 70px;
@@ -191,6 +197,6 @@ h1 {
 /* Image */
 .image {
     width: 100%;
-    max-width: 400px;
+    max-width: 600px;
     height: auto;
 }
