@@ -64,6 +64,7 @@ const Nav = ({ children }) => {
 
       {/* This is where each page's content will be rendered */}
       <div className="AllPageContent">{children}</div>
+
     </div>
   );
 };
