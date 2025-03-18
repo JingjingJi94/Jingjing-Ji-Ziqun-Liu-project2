@@ -10,6 +10,12 @@ body {
     background-color: #DAA520;
 }
 
+AllPageContent {
+    padding-left: 100px;
+    margin-left: 180px; 
+    padding-top: 20px;
+}
+
 /* Navbar Styling */
 .navbar {
     position: fixed;
@@ -73,7 +79,8 @@ body {
 
 /* Adjust Main Content to Prevent Overlap */
 .content {
-    margin-left: 180px; /* Adjusted to match navbar width */
+    margin-left: 180px; /* Ensures it clears the navbar */
+    padding-left: 40px;
     flex-grow: 1;
     background-color: #DAA520;
     min-height: 100vh;
@@ -162,6 +169,10 @@ h1 {
         flex-direction: column;
         gap: 15px;
     }
+
+    .title {
+        font-size: 10vw;
+    }  
 }
 
 /* Title Animation */
@@ -171,7 +182,7 @@ h1 {
 }
 
 .title {
-    font-size: 80px;
+    font-size: 8vw;
     font-weight: bold;
     text-align: center;
     color: white;
