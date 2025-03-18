@@ -2,7 +2,7 @@ import { Link, useLocation } from "react-router-dom";
 import "../css/common.css";
 
 const Nav = ({ children }) => {
-  const location = useLocation(); // ✅ Get the current URL path
+  const location = useLocation(); // Get the current URL path
 
   return (
     <div>
@@ -63,7 +63,7 @@ const Nav = ({ children }) => {
       </nav>
 
       {/* This is where each page's content will be rendered */}
-      <div className="content">{children}</div>
+      <div className="AllPageContent">{children}</div>
     </div>
   );
 };

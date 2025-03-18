@@ -6,7 +6,7 @@ import "../css/scores.css";
 const Scores = () => {
   return (
     <div>
-      <div className="content">
+      <div className="score-content">
         <div className="score-page">
           <h1>&gt;&gt;&gt;High Scores&lt;&lt;&lt;</h1>
         </div>
